@@ -38,14 +38,6 @@ public class SolutionDayOneTest {
     );
 
     @Test
-    public void shouldReturnLines() throws Exception {
-        var sut = new SolutionDayOne();
-        var result = sut.readLines();
-
-        assertThat(result).hasSize(4232);
-    }
-
-    @Test
     public void shouldParseLineRight() throws Exception {
         var sut = new SolutionDayOne();
         var result = sut.parseLine("R14");

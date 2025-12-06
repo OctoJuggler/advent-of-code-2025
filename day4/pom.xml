@@ -9,13 +9,22 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>day1</artifactId>
+    <artifactId>day4</artifactId>
+
+    <name>day4</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>17</maven.compiler.release>
     </properties>
+
     <dependencies>
+        <dependency>
+            <groupId>org.octojuggler</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.octojuggler</groupId>
             <artifactId>common</artifactId>

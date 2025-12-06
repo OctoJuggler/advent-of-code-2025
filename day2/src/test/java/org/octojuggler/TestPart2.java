@@ -1,5 +1,6 @@
 package org.octojuggler;
 
+import org.octojuggler.datastructures.Pair;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -9,18 +10,18 @@ import static java.util.List.*;
 
 public class TestPart2 {
 
-    static List<Pair> ranges = of(
-            new Pair(new Range(11, 22), 2),
-            new Pair(new Range(95, 115), 2),
-            new Pair(new Range(998, 1012), 2),
-            new Pair(new Range(1188511880, 1188511890), 1),
-            new Pair(new Range(222220, 222224), 1),
-            new Pair(new Range(1698522, 1698528), 0),
-            new Pair(new Range(446443, 446449), 1),
-            new Pair(new Range(38593856, 38593862), 1),
-            new Pair(new Range(565653, 565659), 1),
-            new Pair(new Range(824824821, 824824827), 1),
-            new Pair(new Range(2121212118, 2121212124), 1)
+    static List<Pair<Range, Integer>> ranges = of(
+            new Pair<>(new Range(11, 22), 2),
+            new Pair<>(new Range(95, 115), 2),
+            new Pair<>(new Range(998, 1012), 2),
+            new Pair<>(new Range(1188511880, 1188511890), 1),
+            new Pair<>(new Range(222220, 222224), 1),
+            new Pair<>(new Range(1698522, 1698528), 0),
+            new Pair<>(new Range(446443, 446449), 1),
+            new Pair<>(new Range(38593856, 38593862), 1),
+            new Pair<>(new Range(565653, 565659), 1),
+            new Pair<>(new Range(824824821, 824824827), 1),
+            new Pair<>(new Range(2121212118, 2121212124), 1)
     );
 
     @Test

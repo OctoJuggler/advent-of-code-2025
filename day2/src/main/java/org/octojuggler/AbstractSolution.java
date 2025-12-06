@@ -1,6 +1,7 @@
 package org.octojuggler;
 
 import com.google.common.io.CharStreams;
+import org.octojuggler.utils.FileUtils;
 
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -10,9 +11,7 @@ import java.util.List;
 public abstract class AbstractSolution {
 
     final public List<Range> readInput() {
-        try (var inputStream = this.getClass().getResourceAsStream("/input.txt")) {
-            String input = CharStreams.toString(new InputStreamReader(inputStream));
-
+            var input = FileUtils.readFile("/day2.txt");
             var rangesAsString = input.split(",");
 
             return Arrays.stream(rangesAsString).map(x -> {
@@ -20,9 +19,6 @@ public abstract class AbstractSolution {
                 return new Range(Long.parseLong(parts[0]), Long.parseLong(parts[1]));
             }).toList();
 
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
     }
 
     final public long getSumOfInvalidNumbers(List<Range> ranges) {

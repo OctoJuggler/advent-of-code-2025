@@ -1,5 +1,7 @@
 package org.octojuggler;
 
+import org.octojuggler.utils.FileUtils;
+
 import java.io.IOException;
 
 record Result(int x, int y) {
@@ -99,7 +101,7 @@ public class SolutionDayOne extends AbstractSolution{
 
     public static void main(String[] args) throws IOException {
         var solution = new SolutionDayOne();
-        var lines = solution.readLines();
+        var lines = FileUtils.readLines("/day1.txt");
 
         var result = solution.turnTheDial(lines);
         System.out.println(result);

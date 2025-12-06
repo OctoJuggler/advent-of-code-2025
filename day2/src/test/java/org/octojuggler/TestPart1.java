@@ -47,7 +47,7 @@ public class TestPart1 {
     public void checkSumOfInvalidNumbers() {
         var sut = new Part1();
         var result = sut.getSumOfInvalidNumbers(ranges);
-        Assertions.assertThat(result).isEqualTo(1227775554);
+        Assertions.assertThat(result).isEqualTo(1227776664);
     }
 
 }

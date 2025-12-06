@@ -1,31 +1,9 @@
 package org.octojuggler;
 
-import com.google.common.io.CharStreams;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.List;
 
 
 public abstract class AbstractSolution {
-
-    public static final String INPUT_FILE = "/day1.txt";
-
-    List<String> readLines() throws IOException {
-        try (var inputStream = this.getClass().getResourceAsStream(INPUT_FILE)) {
-
-            if (inputStream == null) {
-                throw new RuntimeException("Unable to find resource: " + INPUT_FILE);
-            }
-
-            var reader = new BufferedReader(new InputStreamReader(inputStream));
-            return CharStreams.readLines(reader);
-
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
 
     int parseLine(String line) {
         var trimmedLine = line.trim();
